@@ -1,0 +1,14 @@
+[package]
+name = "ottr"
+description = "A highly parallel game engine"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/otterengine/ottr"
+readme = "README.md"
+categories = ["game-engines", "graphics", "rendering"]
+keywords = ["game", "engine", "graphics", "gamedev", "otter"]
+documentation = "https://docs.rs/ottr"
+exclude = [".github", ".husky", "node_modules", "assets", "*.json"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
