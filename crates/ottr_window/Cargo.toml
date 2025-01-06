@@ -11,4 +11,4 @@ winit = "0.30.8"
 flume = "0.11.1"
 futures = "0.3.31"
 
-ottr_main = { path = "../ottr_main" }
+ottr_main = { path = "../ottr_main", version = "0.1.0" }

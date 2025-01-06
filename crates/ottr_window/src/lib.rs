@@ -39,6 +39,12 @@ impl WindowLoop {
     }
 }
 
+impl Default for WindowLoop {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl MainLoop for WindowLoop {
     async fn run(self) -> MainLoopExit {
         let Self { event_loop } = self;
@@ -83,11 +89,8 @@ impl ApplicationHandler for App {
         _window_id: WindowId,
         event: WindowEvent,
     ) {
-        match event {
-            WindowEvent::CloseRequested => {
-                event_loop.exit();
-            }
-            _ => {}
+        if event == WindowEvent::CloseRequested {
+            event_loop.exit();
         }
     }
 }
