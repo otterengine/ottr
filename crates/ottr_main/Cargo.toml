@@ -1,0 +1,13 @@
+[package]
+name = "ottr_main"
+description = "Utilities for defining the main loop of an Otter application"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+repository.workspace = true
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]

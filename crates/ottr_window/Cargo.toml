@@ -1,0 +1,14 @@
+[package]
+name = "ottr_window"
+description = "A windowing library for Otter"
+version = "0.1.0"
+edition = "2021"
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+winit = "0.30.8"
+flume = "0.11.1"
+futures = "0.3.31"
+
+ottr_main = { path = "../ottr_main" }

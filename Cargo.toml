@@ -1,8 +1,6 @@
 [package]
 name = "ottr"
 description = "A highly parallel game engine"
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/otterengine/ottr"
 readme = "README.md"
 categories = ["game-engines", "graphics", "rendering"]
 keywords = ["game", "engine", "graphics", "gamedev", "otter"]
@@ -10,5 +8,22 @@ documentation = "https://docs.rs/ottr"
 exclude = [".github", ".husky", "node_modules", "assets", "*.json"]
 version = "0.1.0"
 edition = "2021"
+license.workspace = true
+repository.workspace = true
+
+[workspace]
+members = ["crates/*"]
+
+package.license = "MIT OR Apache-2.0"
+package.repository = "https://github.com/otterengine/ottr"
+
+[features]
+default = ["std", "ottr_window"]
+std = ["ottr_main/std"]
 
 [dependencies]
+ottr_main = { path = "crates/ottr_main", default-features = false }
+ottr_window = { path = "crates/ottr_window", optional = true }
+
+[dev-dependencies]
+tokio = { version = "1.42.0", features = ["full"] }
