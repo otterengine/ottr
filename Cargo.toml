@@ -24,3 +24,6 @@ std = ["ottr_main/std"]
 [dependencies]
 ottr_main = { path = "crates/ottr_main", default-features = false }
 ottr_window = { path = "crates/ottr_window", optional = true }
+
+[dev-dependencies]
+tokio = { version = "1.42.0", features = ["full"] }
